@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.centered {
+	max-width: 1700px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+header {
+	overflow: hidden;
+	background-color: black;
+	width: 100%;
+	z-index: 500;
+}
+
+nav {
+	z-index: 100;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	max-width: 1700px;
+}
+
+nav li {
+	list-style-type: none;
+	padding: 10px;
+}
+
+.left li {
+	float: left;
+}
+
+.right li {
+	float: right;
+}
+
+nav a {
+	/* color: white; */
+}
+
+/* The Start of Blog Elements Begin Here */
+
+article {
+	width: 100%;
+	height: 690px;
+	background-image: url(/imgs/blog/math.jpg);
+	position: relative;
+}
+
+article a {
+	width: 100%;
+}
+
+.blog-image img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 690px;
+	object-fit: cover;
+}
+
+.blog-attributes {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding-top: 60px;
+	padding-left: 100px;
+	padding-bottom: 60px;
+	font-size: 45px;
+	color: white;
+}
+
+
+.blog-tag {
+	font-size: 15px;
+	text-transform: uppercase;
+	padding: 5px;
+	background-color: white;
+	border-radius: 4px;
+	color: black;
+}
