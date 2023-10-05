@@ -3,6 +3,14 @@
 * {
 	margin: 0;
 	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:root {
+	--nav-color: transparent;
+	--span-hover-delay: 200ms;
 }
 
 body {
@@ -10,9 +18,9 @@ body {
 }
 
 .centered {
-	max-width: 1700px;
 	margin-left: auto;
 	margin-right: auto;
+	max-width: 1700px;
 }
 
 header {
@@ -20,21 +28,63 @@ header {
 	background-color: black;
 	width: 100%;
 	z-index: 500;
+	position: fixed;
 }
 
 nav {
 	z-index: 100;
 	position: absolute;
-	margin-left: auto;
-	margin-right: auto;
+	/* margin-left: auto; */
+	/* margin-right: auto; */
+	padding-left: 50px;
+	padding-right: 50px;
 	left: 0;
 	right: 0;
-	max-width: 1700px;
+	background-color: var(--nav-color);
+	max-height: 49px;
+	font-weight: bold;
 }
 
 nav li {
 	list-style-type: none;
-	padding: 10px;
+	padding: 15px;
+	 background: 
+	    linear-gradient(currentColor 0 0) 
+	    bottom /100% var(--d, 0px) no-repeat;
+	 transition: 0.5s;
+	 background-position: bottom 0px center;
+}
+
+nav li:hover {
+	--d: 2px;
+	 background-position: bottom 8px center;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+.blog-tag a {
+	color: black;
+	transition: var(--span-hover-delay);
+}
+
+.blog-tag:hover {
+	background-color: black;
+	transition: var(--span-hover-delay);
+}
+
+.blog-tag:hover a {
+	color: white;
+	transition: var(--span-hover-delay);
+}
+
+
+header {
+	height: 49px;
+	width: 100%;
+	background-color: var(--nav-color);
 }
 
 .left li {
@@ -45,31 +95,37 @@ nav li {
 	float: right;
 }
 
-nav a {
-	/* color: white; */
+/* The Start of Blog Elements Begin Here */
+
+.bl-article {
+	height: 690px;
 }
 
-/* The Start of Blog Elements Begin Here */
+.bl-latest {
+	background: rgb(15,14,34);
+	background: linear-gradient(180deg, rgba(15,14,34,1) 0%, rgba(9,9,121,0.4247899843531162) 35%, rgba(0,212,255,0) 100%);
+	height: 690px;
+}
 
 article {
 	width: 100%;
-	height: 690px;
-	background-image: url(/imgs/blog/math.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: bottom;
 	position: relative;
 }
 
-article a {
-	width: 100%;
+.matek-kalkulus {
+	background-image: url(/imgs/blog/kalkulus.jpg);
 }
 
-.blog-image img{
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	width: 100%;
-	height: 690px;
-	object-fit: cover;
+.informatika-kernel {
+	background-image: url(/imgs/blog/kernel.png);
+}
+
+.informatika-openbsd {
+	background-image: url(/imgs/blog/openbsd.png);
 }
 
 .blog-attributes {
@@ -77,13 +133,24 @@ article a {
 	bottom: 0;
 	left: 0;
 	right: 0;
-	padding-top: 60px;
-	padding-left: 100px;
-	padding-bottom: 60px;
 	font-size: 45px;
 	color: white;
+	margin-bottom: 50px;
+	padding-left: 50px;
+	padding-right: 50px;
 }
 
+.underline-anim {
+	background: 
+		linear-gradient(white 0 0) 0 100% /var(--d, 0) 3px
+		no-repeat;
+	transition: 0.5s;
+
+}
+
+.underline-anim:hover {
+	--d: 100%;
+}
 
 .blog-tag {
 	font-size: 15px;
@@ -92,4 +159,22 @@ article a {
 	background-color: white;
 	border-radius: 4px;
 	color: black;
+	transition: var(--span-hover-delay);
 }
+
+.blog-title {
+	font-weight: bold;
+}
+
+.blog-description {
+	vertical-align: top;
+}
+
+.blog-readtime {
+	font-size: 21px;
+	vertical-align: top;
+}
+
+/* STYLING OF EACH BLOG PAGES BEGIN HERE */
+
+

@@ -4,22 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Tantárgy Guru</title>
+    <title>Tudomány Guru</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="icon" href="/imgs/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
   </head>
   <body>
 
 	<div class="site-primary">
-	  <header class="centered">
-		<nav>
+	<header>
+		<nav class="centered">
 			<ul class="left">
-				<a href="/.html"><li>Tantárgy Guru</li></a>
-				<a href="/.html"><li>Matematika</li></a>
-				<a href="/.html"><li>Informatika</li></a>
-				<a href="/.html"><li>Történelem</li></a>
-				<a href="/.html"><li>Magyar Nyelv</li></a>
-				<a href="/.html"><li>Angol</li></a>
+				<a href="/index.html"><li>Tudomány Guru</li></a>
+				<a href="/pages/matematika.html"><li>Matematika</li></a>
+				<a href="/pages/informatika.html"><li>Informatika</li></a>
 			</ul>
 
 			<ul class="right">
@@ -33,16 +31,49 @@
 
     <main>
 
-		<article>
-		<a href="/blog/asd.html">
-			<div class="blog-attributes">
-				<span class="blog-tag">Article</span>
-				<div class="blog-title">A Kalkulus - hogyan készüljek fel?</div>
-				<div class="blog-description">Blogunkban bemutatjuk, mik a Kalkulus követleményei</div>
-				<div class="blog-author">Béla</div>
-				<div class="blog-readtime">5 perces olvasás</div>
+		<article class="matek-kalkulus bl-article">
+			<div class="bl-latest">
+			<div class="blog-attributes centered">
+				<span class="blog-tag"><a href="/pages/tags/matematika.html">Matematika</a></span>
+				<span class="blog-tag"><a href="/pages/tags/informatika.html">Informatika</a></span><br>
+				<a href="/pages/matek/kalkulus.html">
+					<span class="underline-anim">
+						<span class="blog-title">A Kalkulus - hogyan készüljek fel?</span><br>
+						<span class="blog-description">Követelmények, tudnivalók.</span><br>
+					</span>
+					<span class="blog-author">Béla</span><br>
+					<span class="blog-readtime">13 perc olvasás</div>
+				</a>
 			</div>
-		</a>
+			</div>
+		</article>
+
+		<article class="informatika-kernel bl-article">
+			<div class="blog-attributes centered">
+				<span class="blog-tag"><a href="/pages/tags/informatika.html">Informatika</a></span><br>
+				<a href="/pages/informatika/kernel.html">
+					<span class="underline-anim">
+						<span class="blog-title">Kernel Programozás</span><br>
+						<span class="blog-description">Áttekintés egészen az 1970-es évektől máig, a kernelek programozásának elmélete</span><br>
+					</span>
+					<span class="blog-author">Béla</span><br>
+					<span class="blog-readtime">11 perc olvasás</div>
+				</a>
+			</div>
+		</article>
+
+		<article class="informatika-openbsd bl-article">
+			<div class="blog-attributes centered">
+				<span class="blog-tag"><a href="/pages/tags/informatika.html">Informatika</a></span><br>
+				<a href="/pages/informatika/openbsd.html">
+					<span class="underline-anim">
+						<span class="blog-title">OpenBSD - Open Based Secure Distribution</span><br>
+						<span class="blog-description">Webszerverek kedvenc operációs rendszere</span><br>
+					</span>
+					<span class="blog-author">Béla</span><br>
+					<span class="blog-readtime">6 perc olvasás</div>
+				</a>
+			</div>
 		</article>
 
     </main>
