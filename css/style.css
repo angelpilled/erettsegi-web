@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
 * {
 	margin: 0;
@@ -11,20 +12,46 @@
 :root {
 	--nav-color: transparent;
 	--span-hover-delay: 200ms;
+	--logo-hover: 150ms;
 }
+
+/* MATERIAL FONTS STYLING BEGIN HERE */
+
+.material-symbols-outlined {
+	user-select: none;
+}
+
+.clock {
+	font-size: 18px !important;
+}
+
+/* BODY AND OTHER STYLING BEGINS HERE */
 
 html {
 	scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .centered {
 	margin-left: auto;
 	margin-right: auto;
 	max-width: 1700px;
+}
+
+.content {
+	padding-left: 50px;
+	padding-right: 50px;
+	margin-top: 25px;
+	color: white;
+	font-size: 19px;
+}
+
+main {
+	background-color: #1a1a1a;
+	overflow: hidden;
 }
 
 header {
@@ -154,6 +181,14 @@ article {
 	padding-right: 50px;
 }
 
+.author-line {
+	font-size: 20px;
+}
+
+.by-author {
+	font-weight: bold;
+}
+
 .underline-anim {
 	background: 
 		linear-gradient(white 0 0) 0 100% /var(--d, 0) 3px
@@ -177,7 +212,7 @@ article {
 }
 
 .blog-title {
-	font-weight: bold;
+	font-weight: 1000;
 }
 
 .blog-description {
@@ -245,7 +280,7 @@ footer {
 	display: none;
 }
 
-button {
+.back-button button {
 	width: 50px;	
 	aspect-ratio: 1;
 	border-radius: 30px;
@@ -255,4 +290,107 @@ button {
 
 /* STYLING OF EACH BLOG PAGES BEGIN HERE */
 
+.grid {
+	display: grid;
+	grid-template-areas: 
+	"grid-share grid-content grid-subscribe"	
+	;
+	gap: 200px;
+}
 
+.grid-share {
+	grid-area: grid-share;
+}
+
+.grid-content {
+	grid-area: grid-content;
+}
+
+.grid-subscribe {
+	grid-area: grid-subscribe;
+}
+
+.widget {
+	width: 325px;
+	margin-bottom: 60px;
+}
+
+.widget-title {
+	text-transform: uppercase;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.widget-box {
+	width: 100%;
+	margin-top: 13px;
+	padding: 15px;
+	background-color: #212121;
+}
+
+.widget-logos {
+	text-align: center;
+}
+
+.widget-logos i {
+	padding: 20px;
+	font-size: 30px;
+}
+
+.widget-box input {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	width: 90%;
+	height: 60px;
+	padding: 15px;
+	font-size: 17px;
+	background-color: transparent;
+	border: 1px solid gray;
+	color: gray;
+}
+
+.widget-button {
+	margin-top: 10px;
+}
+
+.widget-button button {
+	color: white;
+	text-transform: uppercase;
+	font-weight: 1000;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	width: 90%;
+	height: 60px;
+	padding: 15px;
+	font-size: 14px;
+	background-color: #7a969e;
+	border: none;
+	transition: var(--span-hover-delay);
+}
+
+.widget-button button:hover {
+	cursor: pointer;
+	background-color: #6ea8ba;
+	transition: var(--span-hover-delay);
+}
+
+.fa-discord:hover {
+	color: #7289d9;
+	transition: var(--logo-hover);
+}
+
+.fa-twitter:hover {
+	color: #1DA1F2;
+	transition: var(--logo-hover);
+}
+
+.fa-github:hover {
+	color: black;
+	transition: var(--logo-hover);
+}
+
+.hover {
+	transition: var(--logo-hover);
+}
