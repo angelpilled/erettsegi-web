@@ -25,14 +25,14 @@ body {
 
 header {
 	overflow: hidden;
-	background-color: black;
 	width: 100%;
-	z-index: 500;
 	position: fixed;
+	background-color: transparent !important;
+	transition: background-color 1s ease 0s;
+	z-index: 101;
 }
 
 nav {
-	z-index: 100;
 	position: absolute;
 	/* margin-left: auto; */
 	/* margin-right: auto; */
@@ -43,6 +43,14 @@ nav {
 	background-color: var(--nav-color);
 	max-height: 49px;
 	font-weight: bold;
+}
+
+.header.solid {
+	background-color: black !important;
+	transition: background-color 1s ease 0s;
+}
+
+header.solid {
 }
 
 nav li {
@@ -114,6 +122,7 @@ article {
 	background-attachment: fixed;
 	background-position: bottom;
 	position: relative;
+	z-index: 100;
 }
 
 .matek-kalkulus {
