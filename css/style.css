@@ -376,6 +376,15 @@ footer {
 	transition: var(--span-hover-delay);
 }
 
+.share-container {
+	margin-top: 13px;
+}
+
+.share-container i {
+	font-size: 30px;
+	padding: 10px;
+}
+
 .fa-discord:hover {
 	color: #7289d9;
 	transition: var(--logo-hover);
@@ -389,6 +398,14 @@ footer {
 .fa-github:hover {
 	color: black;
 	transition: var(--logo-hover);
+}
+
+.fa-facebook:hover {
+	color: #3b5998;
+}
+
+.fa-instagram:hover {
+	color: #d62976;
 }
 
 .hover {
