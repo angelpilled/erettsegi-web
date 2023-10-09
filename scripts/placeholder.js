@@ -6,14 +6,10 @@ $.get("/elements/footer.html", function(data){
     $("#footer-placeholder").replaceWith(data);
 });
 
-$.get("/elements/subscribe.html", function(data){
-    $("#footer-placeholder").replaceWith(data);
-});
-
 $.get("/elements/share.html", function(data){
-    $("#footer-placeholder").replaceWith(data);
+    $("#share-placeholder").replaceWith(data);
 });
 
-$.get("/elements/contact.html", function(data){
-    $("#footer-placeholder").replaceWith(data);
+$.get("/elements/grid-right.html", function(data){
+    $("#grid-right-placeholder").replaceWith(data);
 });

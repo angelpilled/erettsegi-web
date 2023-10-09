@@ -293,9 +293,9 @@ footer {
 .grid {
 	display: grid;
 	grid-template-areas: 
-	"grid-share grid-content grid-subscribe"	
+	"grid-share grid-content grid-right"	
 	;
-	gap: 200px;
+	gap: 60px;
 }
 
 .grid-share {
@@ -304,10 +304,11 @@ footer {
 
 .grid-content {
 	grid-area: grid-content;
+	margin-bottom: 30px;
 }
 
-.grid-subscribe {
-	grid-area: grid-subscribe;
+.grid-right {
+	grid-area: grid-right;
 }
 
 .widget {
@@ -410,4 +411,37 @@ footer {
 
 .hover {
 	transition: var(--logo-hover);
+}
+
+/* MEDIA QUERIES BEGIN HERE*/
+
+@media only screen and (max-width: 1400px) {
+	.grid-right {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 1070px) {
+	.footer-right {
+		display: none;
+	}	
+}
+
+@media only screen and (max-width: 730px) {
+	.grid-share {
+		display: none;
+	}
+
+	.grid {
+		gap: 0px;
+	}
+
+	footer {
+		padding: 0px;
+	}
+
+	.footer-content {
+		padding-top: 30px;
+	}
+	
 }
