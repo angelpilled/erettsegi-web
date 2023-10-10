@@ -319,8 +319,12 @@ footer {
 	margin-left: 35px;
 }
 
-.grid-content h2 {
+.grid-content h2, .grid-content h3, .grid-content h4 {
 	margin-top: 15px;
+}
+
+h4, h3, h2 {
+	text-decoration: underline;
 }
 
 .grid-content p {
@@ -331,6 +335,11 @@ footer {
 	background-color: #595959;
 }
 
+.math-snippet {
+	margin-top: 15px;
+	background-color: #303030;
+	padding: 15px;
+}
 
 .grid-right {
 	grid-area: grid-right;

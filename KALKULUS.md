@@ -5,11 +5,11 @@ Előnyére jut az űrkutatóknak, telekommunikációs rendszerek üzemeltetőine
 ## Követelmények
 A kalkulus alapjáraton egy komplex témakör, és bizonyos követelmények tudásával is rendelkeznünk kell.
 - Algebra: érdemes tudni, hogyan kezeljük egyenleteket, hogyan kell egyeneleteket és egyenlőtlenségeket megoldani, átalakítani és egyszerűsíteni.
-- Függvények:
-- Trigonometria:
-- Analitikai geometriai ismeretek:
-- Határérték ismerete: 
-- Matematikai logika és bizonyítás:
+- Függvények: függvények definiálása; függvények értelmezési tartománya, értékkészlete; alapvető függvénytípusok ismerete, mint pl a lineáris, másodfokú, elsőfokú stb.
+- Trigonometria: A szög fogalma, fokok és radiánok ismerete; Alapvető trigonometrikus/háromszög szögfüggvények ismerete (szinusz, koszinusz, tangens, kotangens, szekáns, koszekáns); trigonometrikus azonosságok és egyenletek
+- Analitikai geometriai ismeretek: Descartes-féle koordinátarendszer; függvények grafikonjainak ábrázolása, azok értelmezése
+- Határérték ismerete
+- Alapvető gondolkodási/logikai megközelítés a problémák levezetéséhez
 
 ## A két típus
 
