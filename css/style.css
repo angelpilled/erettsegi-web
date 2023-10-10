@@ -307,6 +307,31 @@ footer {
 	margin-bottom: 30px;
 }
 
+.grid-content a {
+	color: #3faceb; 
+}
+
+.grid-content a:hover {
+	color: #3f78eb; 
+}
+
+.grid-content li {
+	margin-left: 35px;
+}
+
+.grid-content h2 {
+	margin-top: 15px;
+}
+
+.grid-content p {
+	margin-top: 7px;
+}
+
+.code-snippet {
+	margin: 20px 0;
+}
+
+
 .grid-right {
 	grid-area: grid-right;
 }
