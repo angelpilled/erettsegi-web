@@ -5,13 +5,14 @@
 Az OpenBSD egy BSD (Berkeley Software Distribution) alapú, nyílt forráskódú UNIX operációs rendszer, amit kb 1995-ben kezdte el fejleszteni Theo de Raadt, a NetBSD 1.0-ás verziójának alapjából. A jelenlegi verzió (2023. október 11-én) az OpenBSD 7.3.
 
 ## Az OpenBSD filozófiája
-### Nagyrészt biztonság-központú
-### Egyszerűség
-### Optimalizált és tiszta kódírás
+Az OpenBSD filozófiája nagy hangsúlyt fektet a biztonságra és hordozhatóságra.
 
 ## OpenBSD sajátosságai
-### Kriptográfia - LibreSSL
+### LibreSSL
+A LibreSSL egy nyílt forráskódú implementációja a TLS (Transport Layer Security) protokollnak. Az OpenBSD csapata ezt az SSL-t az OpenSSL helyett fejlesztették ki, miután az OpenSSL kódjában egy biztonsági hibát találtak, ez az ún. Heartbleed biztonsági hiba. A cél a fejlettebb, biztonságosabb SSL protokoll fejlesztése volt.
+
 ### Memória védelem
+
 ### Randomizáció
 
 ## Hogyan próbáljuk ki?
