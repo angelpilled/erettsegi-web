@@ -11,18 +11,26 @@ Az OpenBSD filozófiája nagy hangsúlyt fektet a biztonságra és hordozhatós�
 ### LibreSSL
 A LibreSSL egy nyílt forráskódú implementációja a TLS (Transport Layer Security) protokollnak. Az OpenBSD csapata ezt az SSL-t az OpenSSL helyett fejlesztették ki, miután az OpenSSL kódjában egy biztonsági hibát találtak, ez az ún. Heartbleed biztonsági hiba. A cél a fejlettebb, biztonságosabb SSL protokoll fejlesztése volt.
 
-### Memória védelem
+### Memória használat
 
-### Randomizáció
+Az Arch Linuxom alap, álló helyzetben 250-300mb-ot használ, a Windows legalább 1 gigát. Amikor próbáltam az OpenBSD-t, körülbelül 60mb-ot használt a memóriája.
+Részben ez miatt is szeretett szerverekként, és persze a biztonsága miatt
+
+### PID randomizáció
+A PID (Process IDentification number) az OpenBSD-ben random, még használatlan PID-ket generál az új folyamatoknak, ez elhárítja a külső támadások lehetőségét a BSD felhasználó felé (oly támadások, amelyek egy bizonyos PID "ellen" támadnak). Ez a lehetőség a kernelbe van beépítve, Linuxon pl. nem alap funkció a "mainstream" linux kernelben.
 
 ## Hogyan próbáljuk ki?
 ### Letöltés
-### VMWare
-### Telepítési folyamat
+Ezen a linket elérhetőek az OpenBSD telepítő képek (.img, .iso). A legtöbb hardverrel az amd64 telepítési képek közül bármelyik működni fog.
 
-## Csomagkezelés, avagy package management
-### pkg add
-### portok
+### Virtualizálás
+Ha kiszeretnénk próbálni - nem natívan - az OpenBSD-t, megtehetjük bármilyen virtualizációs programmal, pl. a VirtualBox vagy VMWare programokkal. Az utóbbival problémáim voltak az AUR-ból való telepítéssel, de ez másnak nem biztos, hogy probléma lesz.
+
+### Telepítési folyamat
+https://www.openbsdhandbook.com/installation/
+
+## Negatívumok az OpenBSD-vel
+
 
 ## Mindennapi használatban
 ### Asztali használat
