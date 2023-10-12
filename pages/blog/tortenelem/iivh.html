@@ -33,7 +33,7 @@
 			<span class="author-line">Írta: <span class="by-author">Szilárd</span></span>
 			<span class="material-symbols-outlined">horizontal_rule</span>
 			<span class="material-symbols-outlined clock">schedule</span>
-			<span style="font-size: 16px; vertical-align: 3px;">4 perc olvasás</span>
+			<span style="font-size: 16px; vertical-align: 3px;">4-5 perc olvasás</span>
 
 		</div>
 		</div>
@@ -51,14 +51,14 @@
 
 				<ol>
 					<li>A szövetséges hatalmak magját a "Három Nagy" képezte: az Egyesült Államok, Nagy-Britannia és a Szovjetunió. Ezeket és Kínát együttesen Franklin D. Roosevelt amerikai elnök úgy említette, hogy a "Négy Rendőr".</li>
-					<li>Mikrokernel: A felhasználói-és kernelszolgáltatásokat külön címterekben tárolják, ezáltal biztonságosabb; csak a mikrokernel egy részére van hatással az összeomlás, azonban az írás/olvasás, alap műveletek végzése is lassabb. Ilyen kernellel fut pl.: Mac OS X, Minix.</li>
+					<li>A A tengelyhatalmak három fő tagja Németország, Olaszország és Japán volt. Együttműködésük alapját két közös cél jelentette: Katonai hódításon alapuló, az I. világháború utáni nemzetközi rendet felülíró területi terjeszkedés és birodalomépítés, valamint a szovjet kommunizmus lerombolása vagy hatástalanítása.</li>
 				</ol>
 
-				<h2>Kernel Programozás C-ben</h2>
-				<h3>Miért C-ben programozunk Kernelt?</h3>
-				<p>Miért C-ben, és nem C++ vagy C# nyelveken lett írva a Unix kernel (legvégül)? Hát, mondjuk azért, mert a C hamarabb volt, és azért is, mert a C (utólag) a Unix kiépítésére lett tervelve.</p>
-				<p>Elejében a Unix Assembly nyelven íródott, de később feltalálták a C-t, és átírták a rendszer kódját. Így érthetőbb és egyszerűbb volt a programozó számára, sőt, sokkal rövidebb kódból jött ki.</p>
-				<p>Mivel a C-vel nagyon egyszerűen hozzáférünk a memóriához/hardverhez, és még érthetőbb is az átlagembernek, mint az Assembly (!), ezért ésszerű C-ben kernelt programozni, mint mondjuk Pythonban (igen, lehetséges, és igen, nagyon szar). Mivel a C rendszerprogramozásra lett kitalálva, nagyon ügyes dolgokat tudunk vele készíteni.</p>
+				<h2>A háború fontos eseményei </h2>
+				<h3>Lengyelország megtámadása</h3>
+				<p>1939. szeptember 1-jén Németország lerohanta Lengyelországot. Hogy igazolják a katonai agressziót, a náci propagandisták azzal vádolták a lengyeleket, hogy üldözik az országban élő német etnikumú lakosságot. Emellett azt a hamis vádat terjesztették, miszerint Lengyelország szövetségeseivel, Nagy-Britanniával és Franciaországgal együtt Németország bekerítésére és felosztására készülnek.</p>
+				<p>Hitler végül erre hivatkozva „megtorló” hadműveletet indított Lengyelországgal szemben.</p>
+				<p>Nagy-Britannia és Franciaország korábbi ígéretéhez híven 1939. szeptember 3-án hadüzenettel válaszolt Lengyelország határainak megsértésére. A lengyelek helyzetét tovább nehezítette azonban, hogy szeptember 17-én a Szovjetunió is támadást indított ellenük, így kétfrontos háborúra kényszerültek. A lengyel kormány még aznap elmenekült az országból. </p>
 				
 				<h2>Kernel Fejlesztői Környezet</h2>
 				<p>Nagyon ajánlott használni egy szövegszerkesztőt. Egy Assembler-t, és a GNU C Compiler-ét. Az utóbbi a "gcc", amivel C kódot tudunk átalakítani object fájllá, majd futtathatóvá tehetjük.</p>
@@ -66,31 +66,6 @@
 				<h2>Kernel Modulok</h2>
 				<p>Egy kernel modulok arra lettek kitalálva, hogy kibővítsék az alap kernel funkcionalitását akkor, amikor szükség van rá, sőt, a rendszer újraindítása sem szükséges. Tehát ha felesleges egy kernel funkcionalitás, nincs értelme meghívni, így gyorsabb és biztonságosabb is meghíváskor. Ha már nincs szükségünk továbbra a kernel modulra, úgymond "ki tudjuk tölteni" (unload). Azonban ha új funkcionalitást akarunk beépíteni, muszáj a kernelünket újraépíteni és újraindítani.</p>
 				<p>Itt egy nagyon egyszerű kernel modul, betöltésnél köszön, kitöltésnél pedig elköszön:</p>
-
-<pre><code class="language-c">
-#include &lt;linux/init.h&gt;
-#include &lt;linux/module.h&gt;
-#include &lt;linux/kernel.h&gt;
-
-MODULE_LICENSE(“GPL”);
-MODULE_AUTHOR(“Robert W. Oliver II”);
-MODULE_DESCRIPTION(“A simple example Linux module.”);
-MODULE_VERSION(“0.01”);
-
-static int __init lkm_example_init(void)
-{
-	printk(KERN_INFO “Hello, World!\n”);
-	return 0;
-}
-
-static void __exit lkm_example_exit(void)
-{
-	printk(KERN_INFO “Goodbye, World!\n”);
-}
-
-module_init(lkm_example_init);
-module_exit(lkm_example_exit);
-</code></pre>
 				
 				<h2>Hogyan használja a hardvert a kernel?</h2>
 				<p>Különleges "számítógépes instrukciókkal", a számítógép memóriájának egy bizonyos hardverhez rendelésével, és ezek memóriáknak alap I/O műveletek alkalmazásával történik a hardver kezelése a kernellel.</p>
@@ -109,11 +84,11 @@ module_exit(lkm_example_exit);
 				<h2>Linux Kernel Logolása</h2>
 				<p>Ez a részleg lényegében a Linux rendszerre vonatkozik. Egy elég modern megoldással egész egyszerűen megtekinthetőek a Linux kernel logjai mindössze a <span class="code-snippet">dmesg</span> paranccsal. Systemd-vel futó rendszereken a <span class="code-snippet">journalctl --system -f</span> paranccsal ugyan ez elérhető. Ezen parancsokkal, magas szinten, de tanulható, hogy mégis miként működik a Linux kernel.</p>
 				
-				<h2>Kernel fejlesztési könyvek, közösségek, leírások</h2>
+				<h2>Források</h2>
 				<ul class="grid-forras">
-					<li><a href="https://www.wiki.osdev.org" target="_blank">wiki.osdev.org</a></li>
-					<li><a href="https://forum.osdev.org/" target="_blank">forum.osdev.org</a></li>
-					<li><a href="https://users.iit.uni-miskolc.hu/~toth130/os/gyak/OS.pdf" target="_blank">Magyar Operációs Rendszerek PDF</a></li>
+					<li><a href="https://hu.wikipedia.org/wiki/M%C3%A1sodik_vil%C3%A1gh%C3%A1bor%C3%BA" target="_blank">I. Bekezdés wiki.ii.vh</a></li>
+					<li><a href="https://encyclopedia.ushmm.org/content/hu/article/invasion-of-poland-fall-1939" target="_blank">II. Bekezdés nemetek-lengyelek</a></li>
+					<li><a href="" target="_blank"></a></li>
 					<li><a href="https://tldp.org/LDP/lkmpg/2.6/html/index.html" target="_blank">The Linux Kernel Module Programming Guide</a></li>
 				</ul>
 
