@@ -60,7 +60,14 @@ header {
 	position: fixed;
 	background-color: transparent !important;
 	transition: background-color 1s ease 0s;
-	z-index: 101;
+	z-index: 1000;
+}
+
+.close
+{
+
+	cursor: pointer;
+
 }
 
 nav {
@@ -70,11 +77,13 @@ nav {
 	padding-left: 50px;
 	padding-right: 50px;
 	left: 0;
+	overflow: hidden;
 	right: 0;
 	background-color: var(--nav-color);
 	max-height: 49px;
 	font-weight: bold;
 }
+
 
 .header.solid {
 	background-color: black !important;
@@ -502,13 +511,38 @@ h4, h3, h2 {
 	}
 
 	.nav-active{
-		transform: translateX(-100%);
+		transform: translateX(-130%);
+
+	}
+
+	header {
+		overflow: visible !important;
+		z-index: 1000;
+	}
+
+	.centered {
+
+		overflow: visible !important;
+	}
+
+	.nav-menu-btn {
+		background: none;
+	}
+
+	nav {
+		padding-left: 0!important;
 	}
 
 	.burger {
 		display: block !important;
 		padding: 10px;
 		width: 44px;
+		color: white;
+	}
+
+	.no-scroll {
+		height: 100%;
+		overflow: hidden;
 	}
 
 	.nav-menu-btn {
@@ -523,4 +557,21 @@ h4, h3, h2 {
 		width: 100%;
 	}
 	
+	.left {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		background-color: black;
+		transition: transform 0.5s ease-in;
+		width: 200px;
+		height: 100vh;
+		color: white;
+		z-index: 1;
+	}
+
+	.left li {
+		float: none;
+		padding: 20px ;
+		overflow: hidden;
+	}
 }
