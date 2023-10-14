@@ -38,7 +38,7 @@
                 <span class="author-line">Írta: <span class="by-author">Szilárd</span></span>
                 <span class="material-symbols-outlined">horizontal_rule</span>
                 <span class="material-symbols-outlined clock">schedule</span>
-                <span style="font-size: 16px; vertical-align: 3px;">4 perc olvasás</span>
+                <span style="font-size: 16px; vertical-align: 3px;">5 perc olvasás</span>
 
             </div>
         </div>
@@ -55,95 +55,58 @@
                 financial center. The two nations fought Germany together during the two World Wars; since 1940, the two countries have
                 been close military allies, enjoying the Special Relationship built as wartime allies and NATO partners.</p>
 
-                <h2></h2>
-                <h3>Miért C-ben programozunk Kernelt?</h3>
-                <p>Miért C-ben, és nem C++ vagy C# nyelveken lett írva a Unix kernel (legvégül)? Hát, mondjuk azért,
-                    mert a C hamarabb volt, és azért is, mert a C (utólag) a Unix kiépítésére lett tervelve.</p>
-                <p>Elejében a Unix Assembly nyelven íródott, de később feltalálták a C-t, és átírták a rendszer kódját.
-                    Így érthetőbb és egyszerűbb volt a programozó számára, sőt, sokkal rövidebb kódból jött ki.</p>
-                <p>Mivel a C-vel nagyon egyszerűen hozzáférünk a memóriához/hardverhez, és még érthetőbb is az
-                    átlagembernek, mint az Assembly (!), ezért ésszerű C-ben kernelt programozni, mint mondjuk Pythonban
-                    (igen, lehetséges, és igen, nagyon szar). Mivel a C rendszerprogramozásra lett kitalálva, nagyon
-                    ügyes dolgokat tudunk vele készíteni.</p>
+                <h2>Religion</h2>
+                <p>Both the United States and the United Kingdom share the similarity that a majority of their populations state that their
+                belief is Christian, at 70.4% in the US[292] and 59.5% in the UK. Also, in both countries the majority of Christian
+                followers are members of the mainline Protestant group of churches, rather than the Roman Catholic Church, although the
+                Catholic church is relatively sizeable in both countries. Many of these mainline Protestant churches in the United
+                States have their origins in the United Kingdom or their founders were British.</p>
+                <p>This includes Episcopal (Anglican), Baptist, Methodist, Presbyterian, Congregational, and Quaker.</p>
+                <p>Nevertheless, there are some three big disparities between the two nations in the role of religion and faith. Firstly,
+                the United Kingdom has an established church in two of the four nations of the country; the Anglican Church of England,
+                where the head of state is the head of the church in one, and the Presbyterian Church of Scotland which plays a notable
+                role of the other.</p>
 
-                <h2>Kernel Fejlesztői Környezet</h2>
-                <p>Nagyon ajánlott használni egy szövegszerkesztőt. Egy Assembler-t, és a GNU C Compiler-ét. Az utóbbi a
-                    "gcc", amivel C kódot tudunk átalakítani object fájllá, majd futtathatóvá tehetjük.</p>
+                <h2>Food and drink</h2>
+                <p>Many classic dishes or foods from American cuisine such as hamburgers, hot dogs, barbecue chicken, southern fried
+                chicken, deep-pan pizza, chewing gum, tomato soup, chilli-con-carne, chocolate chip cookies, chocolate brownies,
+                soft-scoop ice cream and donuts are popular in the United Kingdom. Drinks like cola, milkshakes and bourbon are also
+                popular. A number of major American food trends and fads have also been popular and influential in the British palate,
+                for example weight management diets and craft beer.</p>
+                <p>Some British foods have been just as nativised in the US such as apple pie, macaroni and cheese and sandwiches.
+                British cuisine was a major influence on the cuisine of the Southern United States, including fried chicken.
+                British foods like fish and chips, shepherd's pie, Sunday Roast, Afternoon Tea and gingerbread are also entrenched in
+                American food culture. Drinking culture in the US has been heavily influenced by Britain, especially the introduction of
+                whisky and certain styles of beer in the colonial period. By the late 20th Century, British cuisine was
+                sometimes stereotyped as being unappealing in the United States, although British cuisine is commonly eaten there.
+                This reputation has been attributed to the impact that WWII rationing had on British cuisine in the mid-20th Century.</p>
 
-                <h2>Kernel Modulok</h2>
-                <p>Egy kernel modulok arra lettek kitalálva, hogy kibővítsék az alap kernel funkcionalitását akkor,
-                    amikor szükség van rá, sőt, a rendszer újraindítása sem szükséges. Tehát ha felesleges egy kernel
-                    funkcionalitás, nincs értelme meghívni, így gyorsabb és biztonságosabb is meghíváskor. Ha már nincs
-                    szükségünk továbbra a kernel modulra, úgymond "ki tudjuk tölteni" (unload). Azonban ha új
-                    funkcionalitást akarunk beépíteni, muszáj a kernelünket újraépíteni és újraindítani.</p>
-                <p>Itt egy nagyon egyszerű kernel modul, betöltésnél köszön, kitöltésnél pedig elköszön:</p>
+                <h2>Culture and media</h2>
+                <p>Both the US and UK are considered cultural superpowers; both countries having a large scale influence around the world
+                in film, music, literature, and television.</p>
+                <p>n media, connections between the US and the UK in print media are minor but strong in online content. Until 2016, a
+                condensed version of The New York Times was inside The Observer newspaper. In some newsagents in the UK, people can find
+                international editions of USA Today, The New York Times International Edition, the Europe edition of Time,
+                Newsweek, The New Yorker, New York magazine and Foreign Affairs. While in the US you would be able to find the
+                international edition of The Economist and in New York City, the Financial Times. After Rupert Murdoch's purchase of the
+                New York Post in November 1976, he redesigned the newspaper into a populist right-wing tabloid, likewise his
+                earlier relaunch of the British Sun newspaper as a down-market tabloid from 1969.</p>
 
-                <pre><code class="language-c">
-#include &lt;linux/init.h&gt;
-#include &lt;linux/module.h&gt;
-#include &lt;linux/kernel.h&gt;
-
-MODULE_LICENSE(“GPL”);
-MODULE_AUTHOR(“Robert W. Oliver II”);
-MODULE_DESCRIPTION(“A simple example Linux module.”);
-MODULE_VERSION(“0.01”);
-
-static int __init lkm_example_init(void)
-{
-	printk(KERN_INFO “Hello, World!\n”);
-	return 0;
-}
-
-static void __exit lkm_example_exit(void)
-{
-	printk(KERN_INFO “Goodbye, World!\n”);
-}
-
-module_init(lkm_example_init);
-module_exit(lkm_example_exit);
-</code></pre>
-
-                <h2>Hogyan használja a hardvert a kernel?</h2>
-                <p>Különleges "számítógépes instrukciókkal", a számítógép memóriájának egy bizonyos hardverhez
-                    rendelésével, és ezek memóriáknak alap I/O műveletek alkalmazásával történik a hardver kezelése a
-                    kernellel.</p>
-                <p>Mindezt az Assembly nyelvvel tudjuk elérni, mivel a "számítógépes instrukciók" valójában Assembly
-                    instrukciók, amelyekkel az összes lehetséges processzor-instrukciókat elvégezhetjük a
-                    számítógépünkön. Ezzel meg is ölhetjük számítógépünket, szóval memória hozzárendeléssel odafigyelni!
-                </p>
-
-                <h2>Kernel Adatstruktúrák</h2>
-                <p>A Kernel adatstruktúrák a jelenlegi rendszer adatainak tárolását szolgálják célul. Ha egy új
-                    "processz", vagyis folyamat létrejön, egy kernel adatstruktúra vele együtt létrejön, ami tartalmazza
-                    a processz összes részletét.</p>
-                <p>Eme adatstruktúrákban három nagyon fontos "táblát" tartalmaz, ez a: processz tábla; fájl tábla; és a
-                    V-node, I-node táblák.</p>
-
-                <ol>
-                    <li>Processz tábla: a processz tábla az összes, jelenleg futó folyamatok információit tárolja.
-                        Ilyenek pl. a tárolási információ, (folyamat) lefuttatási állapot, fájl információk, stb.</li>
-                    <li>Fájl tábla: a fájl tábla a rendszer összes fájljának a bejegyzését tárolja. Egy ilyen bejegyzés
-                        tárolja a fájl állapotát (a fájl-t olvassák/írják-e), vagy a fájl offset-ét, amely lényegében a
-                        következő (olvasás vagy írás) művelet helyét határozza meg a fájlban.</li>
-                    <li>V-node és I-node táblák: ezen táblák jelentősége lényegében hivatkozások a (már fenn említett)
-                        táblákra. A hardver-t a szoftverhez/programhoz "csatlakoztatják"/kötik.</li>
-                </ol>
-
-                <h2>Linux Kernel Logolása</h2>
-                <p>Ez a részleg lényegében a Linux rendszerre vonatkozik. Egy elég modern megoldással egész egyszerűen
-                    megtekinthetőek a Linux kernel logjai mindössze a <span class="code-snippet">dmesg</span>
-                    paranccsal. Systemd-vel futó rendszereken a <span class="code-snippet">journalctl --system -f</span>
-                    paranccsal ugyan ez elérhető. Ezen parancsokkal, magas szinten, de tanulható, hogy mégis miként
-                    működik a Linux kernel.</p>
+                <h2>Film</h2>
+                <p>There is much crossover appeal in the modern entertainment culture of the United Kingdom and the United States. For
+                example, Hollywood blockbuster movies made by Steven Spielberg and George Lucas have had a large effect on British
+                audiences in the United Kingdom, while the James Bond and Harry Potter series of films have attracted high interest in
+                the United States.</p>
+                <p>Also, the animated films of Walt Disney as well as those of Pixar, DreamWorks, Don Bluth, Blue Sky, Illumination and
+                others have continued to make an indelible mark and impression on British audiences, young and old, for almost 100
+                years. Films by Alfred Hitchcock continuously make a lasting impact on a loyal fan base in the United States, as Alfred
+                Hitchcock himself influenced notable American filmmakers such as John Carpenter, in the horror and slasher film genres.</p>
+                <p>Production of films are often shared between the two nations, whether it be a concentrated use of British and American
+                actors or the use of film studios located in London or Hollywood.</p>
 
                 <h2>Források</h2>
                 <ul class="grid-forras">
-                    <li><a href="https://en.wikipedia.org/wiki/United_Kingdom%E2%80%93United_States_relations" target="_blank">wikipedia/a></li>
-                    <li><a href="https://forum.osdev.org/" target="_blank">forum.osdev.org</a></li>
-                    <li><a href="https://users.iit.uni-miskolc.hu/~toth130/os/gyak/OS.pdf" target="_blank">Magyar
-                            Operációs Rendszerek PDF</a></li>
-                    <li><a href="https://tldp.org/LDP/lkmpg/2.6/html/index.html" target="_blank">The Linux Kernel Module
-                            Programming Guide</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/United_Kingdom%E2%80%93United_States_relations" target="_blank">wikipedia</a></li>
                 </ul>
 
             </div>
