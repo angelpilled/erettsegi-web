@@ -337,6 +337,7 @@ footer {
 .grid-content {
 	grid-area: grid-content;
 	margin-bottom: 30px;
+	max-width: 480px;
 }
 
 .grid-content a {
@@ -487,8 +488,14 @@ h4, h3, h2 {
 	}
 }
 
+@media only screen and (max-width: 1325px) {
+	.footer-right img:nth-child(1) {
+		display: none;
+	}	
+}
+
 @media only screen and (max-width: 1070px) {
-	.footer-right {
+	.footer-right img:nth-child(2) {
 		display: none;
 	}	
 }
@@ -531,6 +538,7 @@ h4, h3, h2 {
 
 	nav {
 		padding-left: 0!important;
+		padding-right: 0!important;
 	}
 
 	.burger {
