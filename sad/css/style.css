@@ -173,6 +173,14 @@ article {
 	background-image: url(/imgs/blog/iivh.jpg);
 }
 
+.angol-usauk {
+	background-image: url(/imgs/blog/usauk.jpg);
+}
+
+.magyar-nyelvujitas {
+	background-image: url(/imgs/blog/kazinczy.jpg);
+}
+
 .blog-attributes {
 	position: absolute;
 	bottom: 0;
