@@ -169,6 +169,18 @@ article {
 	background-image: url(/imgs/blog/openbsd.png);
 }
 
+.tortenelem-iivh {
+	background-image: url(/imgs/blog/iivhjava.jpg);
+}
+
+.angol-us-uk {
+	background-image: url(/imgs/blog/us-uk.jpg);
+}
+
+.irodalom-nyelvujitas {
+	background-image: url(/imgs/blog/kazinczy.jpg);
+}
+
 .blog-attributes {
 	position: absolute;
 	bottom: 0;

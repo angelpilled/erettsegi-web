@@ -29,7 +29,7 @@
         </header>
     </div>
 
-    <article class="informatika-kernel bl-article">
+    <article class="angol-usauk bl-article">
 
         <div class="bl-latest">
             <div class="blog-attributes centered">
@@ -49,24 +49,13 @@
             <div class="grid-share" id="share-placeholder"></div>
 
             <div class="grid-content">
-                <h2>Mi az a Kernel?</h2>
-                <p>A Kernel az operációs rendszerek középpontja. Lényegében ez a "komponens" kezeli a számítógép
-                    legalapabb műveleteit; I/O műveletek, memóriakezelés, CPU-hozzáférés, és még több.</p>
-                <p>Nagyon fontos egy optimalizált Kernel megírása, mivel egy pl. hobbi operációs rendszeren (és minden
-                    más rendszeren is) ez a program kezel majd minden műveletet, így a gyorsaság és affinitás a cél.</p>
-                <p>A két legfőbb kernel model a monolitikus és a mikrokernel:</p>
+                <h2>Relation</h2>
+                <p>Relations between the United Kingdom and the United States have ranged from military opponents to close allies since 1776. The Thirteen Colonies seceded from the Kingdom of Great Britain and declared independence in 1776, fighting a successful revolutionary war.</p>
+                <p>By the 1880s, the US economy had surpassed Britain; in the 1920s, New York City surpassed London as the world's leading
+                financial center. The two nations fought Germany together during the two World Wars; since 1940, the two countries have
+                been close military allies, enjoying the Special Relationship built as wartime allies and NATO partners.</p>
 
-                <ol>
-                    <li>Monolitikus Kernel: ez a fajta kernel a felhasználói-és kernelszolgáltatásokat is egyetlen
-                        címtérben végzik, ezáltál ha egy szolgáltatás is összeomlik, az egész rendszer is összeomlik.
-                        Modernebb monolitikus rendszereken ezt kiküszöbölték a kernel modulok használatával. Ilyen
-                        kernellel rendelkezik pl. a Linux, a BSD operációs rendszerek és a Windows is.</li>
-                    <li>Mikrokernel: A felhasználói-és kernelszolgáltatásokat külön címterekben tárolják, ezáltal
-                        biztonságosabb; csak a mikrokernel egy részére van hatással az összeomlás, azonban az
-                        írás/olvasás, alap műveletek végzése is lassabb. Ilyen kernellel fut pl.: Mac OS X, Minix.</li>
-                </ol>
-
-                <h2>Kernel Programozás C-ben</h2>
+                <h2></h2>
                 <h3>Miért C-ben programozunk Kernelt?</h3>
                 <p>Miért C-ben, és nem C++ vagy C# nyelveken lett írva a Unix kernel (legvégül)? Hát, mondjuk azért,
                     mert a C hamarabb volt, és azért is, mert a C (utólag) a Unix kiépítésére lett tervelve.</p>
@@ -147,9 +136,9 @@ module_exit(lkm_example_exit);
                     paranccsal ugyan ez elérhető. Ezen parancsokkal, magas szinten, de tanulható, hogy mégis miként
                     működik a Linux kernel.</p>
 
-                <h2>Kernel fejlesztési könyvek, közösségek, leírások</h2>
+                <h2>Források</h2>
                 <ul class="grid-forras">
-                    <li><a href="https://wiki.osdev.org/Expanded_Main_Page" target="_blank">wiki.osdev.org</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/United_Kingdom%E2%80%93United_States_relations" target="_blank">wikipedia/a></li>
                     <li><a href="https://forum.osdev.org/" target="_blank">forum.osdev.org</a></li>
                     <li><a href="https://users.iit.uni-miskolc.hu/~toth130/os/gyak/OS.pdf" target="_blank">Magyar
                             Operációs Rendszerek PDF</a></li>
