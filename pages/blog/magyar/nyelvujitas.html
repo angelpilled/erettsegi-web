@@ -38,7 +38,7 @@
                 <span class="author-line">Írta: <span class="by-author">Szilárd</span></span>
                 <span class="material-symbols-outlined">horizontal_rule</span>
                 <span class="material-symbols-outlined clock">schedule</span>
-                <span style="font-size: 16px; vertical-align: 3px;">4 perc olvasás</span>
+                <span style="font-size: 16px; vertical-align: 3px;">10-15 perc olvasás</span>
 
             </div>
         </div>
@@ -71,57 +71,47 @@
                 nyelv viszont egyelőre nem volt elég árnyalt ahhoz, hogy a hivatalos latin vagy a mellette használatos (és 1784-ben II.
                 József által hivatalossá tett, majd 1790-ben visszavont) német helyébe léphessen.</p>
 
-                <h2>Kernel Fejlesztői Környezet</h2>
-                <p>Nagyon ajánlott használni egy szövegszerkesztőt. Egy Assembler-t, és a GNU C Compiler-ét. Az utóbbi a
-                    "gcc", amivel C kódot tudunk átalakítani object fájllá, majd futtathatóvá tehetjük.</p>
+                <h2>18. század vége-19.sz eleje</h2>
+                <p>A felvilágosodás hajnalán Bessenyei György több írásában sürgette az anyanyelven való művelődés lehetőségének
+                megteremtését. "Minden nemzet a maga nyelvén lett tudós, de idegenen sohasem" - írta 1778-ban a Magyarság című cikkében.</p>
+                <p>1788-tól a Magyar Museum és 1817-től a Tudományos Gyűjtemény. 1830-ban megkezdte működését a Magyar Tudós Társaság, a Magyar Tudományos Akadémia elődje. Pályázatokon a nyelvvel
+                kapcsolatos pályaművek mérettek meg, viták zajlottak - a nyelvújítás mindennek nyomán közüggyé vált. A nyelvújító harc
+                vezére pedig - elméleti felkészültsége és munkásságával kivívott tekintélye révén - Kazinczy Ferenc lett.</p>
 
-                <h2>Kernel Modulok</h2>
-                <p>Egy kernel modulok arra lettek kitalálva, hogy kibővítsék az alap kernel funkcionalitását akkor,
-                    amikor szükség van rá, sőt, a rendszer újraindítása sem szükséges. Tehát ha felesleges egy kernel
-                    funkcionalitás, nincs értelme meghívni, így gyorsabb és biztonságosabb is meghíváskor. Ha már nincs
-                    szükségünk továbbra a kernel modulra, úgymond "ki tudjuk tölteni" (unload). Azonban ha új
-                    funkcionalitást akarunk beépíteni, muszáj a kernelünket újraépíteni és újraindítani.</p>
-                <p>Itt egy nagyon egyszerű kernel modul, betöltésnél köszön, kitöltésnél pedig elköszön:</p>
-
-                <h2>Hogyan használja a hardvert a kernel?</h2>
-                <p>Különleges "számítógépes instrukciókkal", a számítógép memóriájának egy bizonyos hardverhez
-                    rendelésével, és ezek memóriáknak alap I/O műveletek alkalmazásával történik a hardver kezelése a
-                    kernellel.</p>
-                <p>Mindezt az Assembly nyelvvel tudjuk elérni, mivel a "számítógépes instrukciók" valójában Assembly
-                    instrukciók, amelyekkel az összes lehetséges processzor-instrukciókat elvégezhetjük a
-                    számítógépünkön. Ezzel meg is ölhetjük számítógépünket, szóval memória hozzárendeléssel odafigyelni!
-                </p>
-
-                <h2>Kernel Adatstruktúrák</h2>
-                <p>A Kernel adatstruktúrák a jelenlegi rendszer adatainak tárolását szolgálják célul. Ha egy új
-                    "processz", vagyis folyamat létrejön, egy kernel adatstruktúra vele együtt létrejön, ami tartalmazza
-                    a processz összes részletét.</p>
-                <p>Eme adatstruktúrákban három nagyon fontos "táblát" tartalmaz, ez a: processz tábla; fájl tábla; és a
-                    V-node, I-node táblák.</p>
-
-                <ol>
-                    <li>Processz tábla: a processz tábla az összes, jelenleg futó folyamatok információit tárolja.
-                        Ilyenek pl. a tárolási információ, (folyamat) lefuttatási állapot, fájl információk, stb.</li>
-                    <li>Fájl tábla: a fájl tábla a rendszer összes fájljának a bejegyzését tárolja. Egy ilyen bejegyzés
-                        tárolja a fájl állapotát (a fájl-t olvassák/írják-e), vagy a fájl offset-ét, amely lényegében a
-                        következő (olvasás vagy írás) művelet helyét határozza meg a fájlban.</li>
-                    <li>V-node és I-node táblák: ezen táblák jelentősége lényegében hivatkozások a (már fenn említett)
-                        táblákra. A hardver-t a szoftverhez/programhoz "csatlakoztatják"/kötik.</li>
-                </ol>
-
-                <h2>Linux Kernel Logolása</h2>
-                <p>Ez a részleg lényegében a Linux rendszerre vonatkozik. Egy elég modern megoldással egész egyszerűen
-                    megtekinthetőek a Linux kernel logjai mindössze a <span class="code-snippet">dmesg</span>
-                    paranccsal. Systemd-vel futó rendszereken a <span class="code-snippet">journalctl --system -f</span>
-                    paranccsal ugyan ez elérhető. Ezen parancsokkal, magas szinten, de tanulható, hogy mégis miként
-                    működik a Linux kernel.</p>
+                <h2>Kazinczy munkássága</h2>
+                <p>Kazinczy Ferenc gazdag munkásságának nagyobbik része a felvilágosodás rövid emberöltője utánra esik, de nemcsak azért
+                tartozik a világosság nemzedékéhez, mert akkor indul, és annak az egyik jellegzetes alakja, hanem azért is, mert éppen ő
+                az, aki továbbviszi a felvilágosodás eszmevilágát és hevületét, hogy a sötétség évtizedeiben a legeslegfőbb ösztönző
+                legyen, s megérve még a reformkor kezdetét is, összekötő kapocsként vehessük tudomásul a XVIII. század újító szelleme és
+                a XIX. század romantikája között. Kazinczy még Bessenyeitől kapta az ösztönzést, és Kisfaludy Károlyon keresztül
+                Vörösmarty nemzedékének is ösztönzője lett.</p>
+                <p>Befejezve tanulmányait, ő is, mint oly sok magyar értelmiségi akkor is, azóta is, jogi diplomát szerzett. Kassán lett
+                egy rövid időre ügyvédjelölt. Ez időben kerül fel néhány hétre Pestre, ahol megismerkedik Ráday Gedeonnal. Ez a
+                találkozás is döntő jelentőségű. Rádaytól tanulja meg a rímes jambust, a nyugat-európai verselést, amelyet majd ő kezd
+                el népszerűsíteni. Ügyvéd sohasem akart lenni, csak éppen belekóstolt a joggyakorlatba; igazából az irodalom és a közművelődés izgatja. Ezt az értelmesebb megyei urak tudomásul is veszik, és Kazinczyt hamarosan kinevezik iskolai inspektornak, azaz
+                tanfelügyelőnek.</p>
+                <p>Hamarosan az ifjaknak az a része, amely az érzelmek szabadságára esküszik, őt tekinti irodalmi vezérének, és az Orpheust
+                a folyóiratuknak. Ezt az irányt nevezik akkoriban németesnek. Tagja a forradalmat előkészítő titkos páholynak. És ő is vádlottja lesz a Martinovics-pernek. Előbb halálos ítélet,
+                azután hosszú fogság Spielbergben, Kufsteinban, Munkácson. Több mint hat évig, egészen pontosan ahogy nemegyszer
+                leírta, 2387 napig volt súlyos börtönben. Negyvenkét éves korában kerül ki, 1801-ben.</p>
+                <p>Szabadulása után rövidesen megnősül. És munkához lát. Egyik legfontosabb tevékenysége, hogy vezéralakja a nyelvújításnak. Ez a nyelvújítás már ösztönösen megkezdődött a bécsi
+                testőröknél, különösen Báróczinál. De Kazinczy felismeri, hogy mozgalomszerűen, az egész irodalomnak és nyelvtudománynak
+                fel kell venni a rendszeres munkát a nyelv gazdagítására.</p>
+                <p>Kétségtelen, hogy a kortársak között Kazinczy költészete finom, de igen halovány; maradandót csak az epigrammákban
+                tudott fogalmazni. De ez a halovány költészet üdvös hatással volt a sokkal erőteljesebb kortársakra. Prózaíróként ennél
+                jelentékenyebb. Útirajzai és önéletrajzi művei, a Pályám emlékezete és a hagyatékában talált kitűnő Fogságom naplója,
+                Kármán Fannija és a majd megszülető romantikus próza között a legjobb irodalmi színvonalat jelentik.</p>
+                <p>Igazi jelentősége azonban kultúraszervező, irodalomteremtő létében van, abban a kultúrpolitikai magatartásban, amellyel a
+                felvilágosodás szellemét továbbvitte és vezérként képviselte a következő század első harmadában. 1831-ben, élete
+                hetvenkettedik évében halt meg. Halálakor már javában tartott a reformkor, az irodalomban Vörösmarty, a kritikában Bajza
+                volt a vezéralak, és diadalmasan hirdetett új világot a romantika. Ennek a magyar romantikának az a magyar
+                felvilágosodás volt az eszmei gyökere, amelyet Kazinczy képviselt az elsötétüléstől az új fény derengéséig.</p>
 
                 <h2>Kernel fejlesztési könyvek, közösségek, leírások</h2>
                 <ul class="grid-forras">
                     <li><a href="https://hu.wikipedia.org/wiki/Nyelv%C3%BAj%C3%ADt%C3%A1s" target="_blank">wikipedia</a></li>
-                    <li><a href="https://mek.oszk.hu/01900/01903/html/index2.html" target="_blank">kozugy</a></li>
-                    <li><a href="https://users.iit.uni-miskolc.hu/~toth130/os/gyak/OS.pdf" target="_blank">Magyar
-                            Operációs Rendszerek PDF</a></li>
+                    <li><a href="https://mek.oszk.hu/01900/01903/html/index2.html" target="_blank">közügy</a></li>
+                    <li><a href="https://www.arcanum.com/hu/online-kiadvanyok/IrodalmiArckapcsarnok-hegedus-geza-irodalmi-arckepcsarnok-1/a-magyar-irodalom-arckepcsarnoka-1239/kazinczy-ferenc-17591831-15C/" target="_blank">Kazinczy munkássága</a></li>
                     <li><a href="https://tldp.org/LDP/lkmpg/2.6/html/index.html" target="_blank">The Linux Kernel Module
                             Programming Guide</a></li>
                 </ul>
