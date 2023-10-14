@@ -1,0 +1,6 @@
+Tudomany Guru
+
+A weboldalt Szilard es Bela keszitette. A forrasweboldalak elerhetoek minden adott oldalon - a blog oldalak aljan a forrasokat linkeltuk.
+A projektfajlok elerhetoek ezen link alatt: https://github.com/angelpilled/erettsegi-web
+
+A weboldalt HTML, CSS, Javascript, es ezek kulso konyvtaraibol epitettuk fel. Ezen konyvtarak a JQuery, MathJax, Prism.
