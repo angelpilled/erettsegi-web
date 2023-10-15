@@ -197,7 +197,7 @@ article {
 	background-image: url(/imgs/blog/usauk.jpg);
 }
 
-.irodalom-nyelvujitas {
+.magyar-nyelvujitas {
 	background-image: url(/imgs/blog/nyelvujitas.jpg);
 }
 
@@ -337,7 +337,7 @@ footer {
 .grid-content {
 	grid-area: grid-content;
 	margin-bottom: 30px;
-	max-width: 480px;
+
 }
 
 .grid-content a {
@@ -511,6 +511,10 @@ h4, h3, h2 {
 
 	footer {
 		padding: 0px;
+	}
+
+	.grid-content {
+		max-width: 480px;
 	}
 
 	.footer-content {
